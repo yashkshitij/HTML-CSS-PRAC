@@ -8,61 +8,38 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
-    <style>
-      p {
-        font-family: Roboto, Arial, Helvetica, sans-serif;
-        margin-top: 0;
-        margin-bottom: 0;
-      }
-      .video-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        column-gap: 16px;
-        row-gap: 40px;
-      }
-      .thumbnail {
-        width: 100%;
-      }
-      .search-bar {
-        display: block;
-      }
-      .video-title {
-        display: inline-block;
-        margin-top: 0;
-        margin-bottom: 12px;
-        font-size: 14px;
-        font-weight: 500;
-        line-height: 20px;
-      }
-      .video-author,
-      .video-stats {
-        font-size: 12px;
-        color: rgb(96, 96, 96);
-      }
-      .video-author {
-        margin-bottom: 4px;
-      }
-      .video-preview {
-      }
-      .video-info-grid {
-        display: grid;
-        grid-template-columns: 50px 1fr;
-      }
-      .channel-pic {
-      }
-      .video-info {
-      }
-      .profile {
-        width: 40px;
-        border-radius: 50px;
-      }
-      .thumbnail-row {
-        margin-bottom: 12px;
-      }
-    </style>
+    <link rel="stylesheet" href="styles/general.css" />
+    <link rel="stylesheet" href="styles/video.css" />
+    <link rel="stylesheet" href="styles/header.css" />
   </head>
   <body>
-    <input class="search-bar" type="text" placeholder="Search" />
+    <div class="header">
+      <div class="left_section">
+        <img class="settings" src="header-pic/settings.svg" />
+        <img class="logo" src="header-pic/youtube-logo.svg" />
+      </div>
+      <div class="middle_section">
+        <input class="search-bar" type="text" placeholder="Search" / >
+        <button class="search_button">
+          <img class="search-icon" src="header-pic/search.svg"
+        </button>
+        <button class="voice_search">
+          <img class="voice_search_icon" src="header-pic/voice-search-icon.svg"
+        </button>
+      </div>
+      <div class="right_section">
+        <button class="upload">
+          <img class="upload_icon" src="header-pic/upload.svg"</button
+        ><button class="apps">
+          <img class="apps_icon" src="header-pic/youtube-apps.svg"</button
+        ><button class="notifications">
+          <img class="notifications_icon" src="header-pic/notifications.svg"</button
+        ><button class="account_profile">
+          <img class="account_profile_pic" src="header-pic/my-channel.jpeg"
+        </button>
+      </div>
+    </div>
+
     <div class="video-grid">
       <div class="video-preview">
         <div class="thumbnail-row">
