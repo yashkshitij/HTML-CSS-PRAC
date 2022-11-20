@@ -1,3 +1,19 @@
+.header {
+  height: 55px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 55px;
+  background-color: white;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: rgb(196, 189, 189);
+  z-index: 100;
+}
 .search-bar {
   flex: 1;
   height: 34px;
@@ -15,12 +31,6 @@
   font-size: 16px;
 }
 
-.header {
-  height: 55px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
 .right_section {
   display: flex;
   align-items: center;
@@ -50,7 +60,8 @@
 .logo {
   height: 25px;
 }
-.search_button {
+.search_button,
+.voice_search {
   height: 38px;
   width: 40px;
   border-top-right-radius: 50px;
@@ -58,6 +69,10 @@
   border-width: 1px;
   border-color: rgb(179, 171, 171);
   box-shadow: inset 1px 2px 3px rgba(0, 0, 0, 0.015);
+  position: relative;
+  margin: 0;
+  display: flex;
+  justify-content: center;
 }
 
 .voice_search {
@@ -69,8 +84,15 @@
 }
 .upload,
 .apps,
-.notifications,
 .account_profile {
+  height: 40px;
+  width: 40px;
+  border-radius: 20px;
+  border: none;
+  margin-left: 6px;
+  background: transparent;
+}
+.notifications {
   height: 40px;
   width: 40px;
   border-radius: 20px;
@@ -100,4 +122,43 @@
 .account_profile_pic {
   width: 40px;
   border-radius: 20px;
+}
+.notifications-container {
+  position: relative;
+}
+.notifications-count {
+  position: absolute;
+  background-color: rgb(196, 0, 0);
+  color: white;
+  top: 0;
+  right: 0;
+  border-radius: 10px;
+  font-size: 13px;
+  padding-left: 5px;
+  padding-right: 6px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+.search_button .tooltip,
+.voice_search .tooltip {
+  position: absolute;
+  background-color: gray;
+  color: white;
+  margin: 0;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-right: 8px;
+  padding-left: 8px;
+  font-size: 12px;
+  border-radius: 2px;
+  bottom: -30px;
+  right: -10px;
+  opacity: 0;
+  transition: opacity 0.15s;
+  pointer-events: none;
+  white-space: nowrap;
+}
+.search_button:hover .tooltip,
+.voice_search:hover .tooltip {
+  opacity: 1;
 }
